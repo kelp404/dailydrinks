@@ -8,6 +8,7 @@ $ git clone git@github.com:kelp404/dailydrinks.git
 $ cd dailydrinks
 $ npm install
 ```
+
 ### 2. Run the develop server
 ```bash
 $ npm start
