@@ -33,7 +33,7 @@ module.exports = class Orders extends React.PureComponent{
               this.props.orders.map((order, index) => (
                 <tr key={`order-${order.id}`}>
                   <td className="text-right">
-                    <Link to={`/orders/${order.id}`}>{index + 1}</Link>
+                    <Link to={{name: 'web.order', params: {orderId: order.id}}}>{index + 1}</Link>
                   </td>
                   <td>{order.name}</td>
                   <td className="text-right">{order.price}</td>

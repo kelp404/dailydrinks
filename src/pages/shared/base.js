@@ -36,19 +36,19 @@ module.exports = class Base extends React.Component{
       <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <Link className="navbar-brand" to="/">dailydrinks</Link>
+            <Link className="navbar-brand" to={{name: 'web'}}>dailydrinks</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
               <span className="navbar-toggler-icon"/>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavDropdown">
               <ul className="navbar-nav mr-auto">
                 <li className={classTable.ordersLink}>
-                  <Link className="nav-link" to="/">Orders</Link>
+                  <Link className="nav-link" to={{name: 'web'}}>Orders</Link>
                 </li>
               </ul>
               <ul className="navbar-nav">
                 <li className={classTable.newOrderLink}>
-                  <Link className="nav-link" to="/new-order">New order</Link>
+                  <Link className="nav-link" to={{name: 'web.new-order'}}>New order</Link>
                 </li>
               </ul>
             </div>

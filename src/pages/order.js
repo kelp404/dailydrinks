@@ -37,7 +37,7 @@ module.exports = class Order extends React.PureComponent{
     }
     operation(form)
       .then(() => {
-        router.go('/');
+        router.go({name: 'web'});
       })
       .catch(error => {
         router.go({name: 'error', params: {error: `${error}`}})
@@ -54,7 +54,7 @@ module.exports = class Order extends React.PureComponent{
     this.setState({isProcessing: true});
     api.order.deleteOrder(this.props.order.id)
       .then(() => {
-        router.go('/');
+        router.go({name: 'web'});
       })
       .catch(error => {
         router.go({name: 'error', params: {error: `${error}`}})
