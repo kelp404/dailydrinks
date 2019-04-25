@@ -67,7 +67,10 @@ module.exports = (env = {}) => ({
         use: [
           {
             loader: 'file-loader',
-            options: {name: 'fonts/[name].[ext]'}
+            options: {
+              name: 'fonts/[name].[ext]',
+              publicPath: env.mode === 'production' ? '.' : '/'
+            }
           }
         ]
       }
