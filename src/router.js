@@ -1,7 +1,7 @@
 const {Router} = require('capybara-router');
 const history = require('history');
 const api = require('./api');
-const BASE_URI = '/';
+const BASE_URI = '/dailydrinks/';
 
 module.exports = new Router({
   history: history.createBrowserHistory(),
