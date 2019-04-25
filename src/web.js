@@ -24,8 +24,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 nprogress.configure({showSpinner: false});
 
-router.listen('ChangeStart', () => {
+router.listen('ChangeStart', (action, toState, fromState) => {
   nprogress.start();
+  console.log(action, toState, fromState, router.history);
   $('.navbar-toggler[aria-expanded=true]').click();
 });
 router.listen('ChangeSuccess', () => nprogress.done());
