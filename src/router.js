@@ -1,6 +1,7 @@
 const {Router} = require('capybara-router');
 const history = require('history');
 const api = require('./api');
+const BASE_URI = '/';
 
 module.exports = new Router({
   history: history.createBrowserHistory(),
@@ -8,7 +9,7 @@ module.exports = new Router({
     {
       isAbstract: true,
       name: 'web',
-      uri: '/',
+      uri: `${BASE_URI}`,
       component: require('./pages/shared/base')
     },
     {
@@ -40,7 +41,7 @@ module.exports = new Router({
     },
     {
       name: 'error',
-      uri: '/error?error',
+      uri: `${BASE_URI}error?error`,
       component: require('./pages/shared/error-page')
     },
     {
