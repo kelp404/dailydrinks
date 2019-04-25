@@ -1,8 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-module.exports = () => ({
+module.exports = (env = {}) => ({
   target: 'web',
   mode: 'development',
   entry: {
@@ -72,11 +73,23 @@ module.exports = () => ({
       }
     ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
-    }),
-    new webpack.ProvidePlugin({$: 'jquery'})
-  ]
+  plugins: (() => {
+    const result = [
+      new MiniCssExtractPlugin({
+        filename: '[name].css',
+        chunkFilename: '[id].css'
+      }),
+      new webpack.ProvidePlugin({$: 'jquery'})
+    ];
+    if (env.mode === 'production') {
+      result.push(
+        new OptimizeCSSAssetsPlugin({
+          cssProcessorOptions: {
+            discardComments: {removeAll: true}
+          }
+        })
+      );
+    }
+    return result;
+  })()
 });
