@@ -1,3 +1,7 @@
 const React = require('react');
 
-module.exports = props => <h2 className="text-center">{props.error}</h2>;
+module.exports = props => {
+  document.title = 'Error - dailydrinks';
+  const message = props.error ? `${props.error}` : props.params.error;
+  return <h2 className="text-center">{message}</h2>
+};

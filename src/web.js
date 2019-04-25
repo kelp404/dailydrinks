@@ -2,6 +2,7 @@
 require('@fortawesome/fontawesome-free/css/all.css');
 require('bootstrap/dist/css/bootstrap.css');
 require('nprogress/nprogress.css');
+require('./scss/_web.scss');
 
 // Vendor
 require('babel-polyfill');
