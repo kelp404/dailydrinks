@@ -19,6 +19,13 @@ module.exports = class Order extends React.PureComponent{
   }
 
   submit(form) {
+    /*
+    The user submit the form to update or create the order.
+    @param form {Object}
+      name: {String}
+      price: {String}
+      notes: {String}
+     */
     const router = require('../router');
     nprogress.start();
     this.setState({isProcessing: true});
@@ -38,6 +45,9 @@ module.exports = class Order extends React.PureComponent{
   }
 
   deleteOrder(event) {
+    /*
+    The user click the delete button to remove the order.
+     */
     event.preventDefault();
     const router = require('../router');
     nprogress.start();
