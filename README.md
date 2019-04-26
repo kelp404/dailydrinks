@@ -19,6 +19,7 @@ $ npm start
 + Supports RWD.
 + Easy to integrate with backend server.  
   This app use [mock server](/src/mock-server.js). Just remove the mock server. It will send real HTTP requests.
++ The mock server use local storage, so you can refresh the page without lost data.
 + Use my project [capybara-router](https://github.com/kelp404/capybara-router) to define routs.  
   I implemented loading effect to all pages. When this app work with backend server, the HTTP request needs process time.  
   I also defined the error page for HTTP request failed.  
