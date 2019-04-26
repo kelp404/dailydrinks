@@ -1,4 +1,6 @@
 # dailydrinks
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/kelp404/dailydrinks.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/kelp404/dailydrinks/context:javascript)
+
 A drinks order web.
 
 ## Setup the develop environment
