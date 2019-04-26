@@ -18,6 +18,10 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const router = require('./router');
 
+if (process.env.NODE_ENV !== 'production') {
+  const {whyDidYouUpdate} = require('why-did-you-update');
+  whyDidYouUpdate(React);
+}
 nprogress.configure({showSpinner: false});
 
 router.listen('ChangeStart', () => {
