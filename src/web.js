@@ -28,7 +28,14 @@ router.listen('ChangeStart', () => {
   nprogress.start();
   $('.navbar-toggler[aria-expanded=true]').click();
 });
-router.listen('ChangeSuccess', () => nprogress.done());
+router.listen('ChangeSuccess', (action) => {
+  nprogress.done();
+  if (action === 'PUSH') {
+    try {
+      window.scrollTo(0, 0);
+    } catch (e) {}
+  }
+});
 router.listen('ChangeError', () => nprogress.done());
 router.start();
 
