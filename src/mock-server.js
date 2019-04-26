@@ -1,4 +1,4 @@
-const Pretender = require('pretender').default;
+const Pretender = require('pretender');
 
 const STORAGE_PREFIX = 'dailydrinks_';
 

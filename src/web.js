@@ -6,7 +6,7 @@ require('./scss/_web.scss');
 
 // Vendor
 require('babel-polyfill');
-require('jquery/dist/jquery');
+const $ = require('jquery/dist/jquery');
 require('bootstrap/dist/js/bootstrap.bundle.js');
 
 // Mock server
